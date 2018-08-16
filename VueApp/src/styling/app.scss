@@ -1,0 +1,11 @@
+@import "~font-awesome/scss/font-awesome.scss";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "~vue-toastr/dist/vue-toastr";
+
+@tailwind preflight;
+
+@tailwind components;
+
+@import "./components/index";
+
+@tailwind utilities;

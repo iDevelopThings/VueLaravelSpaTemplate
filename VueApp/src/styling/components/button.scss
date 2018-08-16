@@ -1,0 +1,27 @@
+.btn {
+  transition: all 0.15s ease-in-out;
+  @apply font-bold py-2 px-4 rounded;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.btn-blue {
+  @apply bg-blue text-white;
+
+  &:hover {
+    @apply bg-blue-dark;
+  }
+}
+
+.btn-blue-outline {
+  @apply bg-transparent text-blue-dark border border-blue;
+
+  &:hover {
+    @apply bg-blue text-white border-transparent ;
+  }
+  &:disabled {
+    @apply border-grey text-grey bg-transparent;
+  }
+}

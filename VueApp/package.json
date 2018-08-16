@@ -1,0 +1,50 @@
+{
+  "name": "vue-laravel-spa-template",
+  "version": "1.0.0",
+  "description": "A vuejs laravel template",
+  "main": "public/index.html",
+  "scripts": {
+    "dev-watch": "npm run development --watch --progress  --watch-poll",
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scootersam/vue-laravel-spa-template.git"
+  },
+  "keywords": [
+    "vuejs"
+  ],
+  "devDependencies": {
+    "laravel-mix": "^2.1.11",
+    "tailwindcss": "^0.6.4",
+    "bootstrap-sass": "^3.3.7",
+    "cross-env": "^5.1.4",
+    "jquery": "^3.1.1"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "collect.js": "^4.0.3",
+    "font-awesome": "^4.7.0",
+    "idb-keyval": "^3.1.0",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
+    "popper.js": "^1.14.4",
+    "vue": "^2.5.17",
+    "vue-loading-spinner": "^1.0.11",
+    "vue-router": "^3.0.1",
+    "vue-stash": "^2.0.1-beta",
+    "vue-toastr": "^2.0.8"
+  },
+  "author": "ScooterSam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scootersam/vue-laravel-spa-template/issues"
+  },
+  "homepage": "https://github.com/scootersam/vue-laravel-spa-template#readme"
+}

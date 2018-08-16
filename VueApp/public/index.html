@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/images/icon.png" />
+    <title>Vue Template</title>
+
+    <link rel="stylesheet" href="./../public/css/app.css">
+</head>
+<body>
+<div id="app" class="min-h-screen bg-grey-lightest">
+    <div v-if="store.app.ready">
+        <keep-alive>
+            <router-view></router-view>
+        </keep-alive>
+    </div>
+    <div v-else>
+        <h1>Loading app...</h1>
+    </div>
+</div>
+
+<script src="./../public/js/app.js"></script>
+
+</body>
+</html>
