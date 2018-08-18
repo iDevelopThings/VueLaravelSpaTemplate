@@ -1,8 +1,8 @@
 .card {
-  @apply bg-white rounded;
+  @apply bg-white rounded shadow;
 
   .body {
-    @apply p-8 shadow ;
+    @apply p-8 ;
   }
 }
 

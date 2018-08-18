@@ -1,0 +1,30 @@
+.float-alert-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 89px;
+  padding: 10px;
+  width: 400px;
+}
+
+.alert {
+  @apply flex items-center font-bold px-8 py-3 shadow-md mb-4;
+  border: none;
+  border-radius: 0;
+}
+
+.alert-primary {
+  @apply bg-blue text-white;
+}
+
+.alert-success {
+  @apply bg-green text-white;
+}
+
+.alert-error, .alert-danger, .alert-validation {
+  @apply bg-red text-white;
+}
+
+.alert-info {
+  @apply bg-blue-lightest text-white;
+}

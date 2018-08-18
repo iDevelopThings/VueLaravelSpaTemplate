@@ -1,6 +1,10 @@
 @import "~font-awesome/scss/font-awesome.scss";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+//@import "~bootstrap-sass/assets/stylesheets/bootstrap";
 @import "~vue-toastr/dist/vue-toastr";
+
+$animationDuration: 0.15s;
+$animationDurationFast: 0.05s;
+@import "~vue2-animate/src/sass/vue2-animate.scss";
 
 @tailwind preflight;
 
@@ -9,3 +13,16 @@
 @import "./components/index";
 
 @tailwind utilities;
+
+[v-cloak] {
+  display: none;
+}
+
+html {
+  @apply bg-grey-lightest;
+}
+
+html, body, #app {
+  height: 100%;
+  min-height: 100%;
+}

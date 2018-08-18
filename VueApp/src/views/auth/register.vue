@@ -10,10 +10,20 @@
             <div class="card shadow-lg">
                 <div class="body ">
                     <div class="form-group">
+                        <label for="email">Name</label>
+                        <input type="text"
+                               v-model="name"
+                               name="name"
+                               required
+                               id="name">
+                    </div>
+
+                    <div class="form-group">
                         <label for="email">Email:</label>
                         <input type="text"
                                v-model="email"
                                name="email"
+                               required
                                id="email">
                     </div>
 
@@ -22,20 +32,30 @@
                         <input type="password"
                                v-model="password"
                                name="password"
+                               required
                                id="password">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password Confirm:</label>
+                        <input type="password"
+                               v-model="password_confirm"
+                               name="password_confirm"
+                               required
+                               id="password_confirm">
                     </div>
 
                     <div class="clearfix">
                         <button class="btn btn-primary float-right" @click="login" type="submit">
-                            Login
+                            Register
                         </button>
                     </div>
 
 
-                    <a href="#"
-                       class="bg-grey-lighter p-3 text-center rounded-lg block mt-4 text-grey-darker hover:text-grey-darkest no-underline">
-                        Forgot your password?
-                    </a>
+                    <router-link to="/login"
+                                 class="bg-grey-lighter p-3 text-center rounded-lg block mt-4 text-grey-darker hover:text-grey-darkest no-underline">
+                        Already have an account?
+                    </router-link>
 
                 </div>
             </div>

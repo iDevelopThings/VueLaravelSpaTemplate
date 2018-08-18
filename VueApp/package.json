@@ -39,7 +39,8 @@
     "vue-loading-spinner": "^1.0.11",
     "vue-router": "^3.0.1",
     "vue-stash": "^2.0.1-beta",
-    "vue-toastr": "^2.0.8"
+    "vue-toastr": "^2.0.8",
+    "vue2-animate": "^2.0.0"
   },
   "author": "ScooterSam",
   "license": "ISC",

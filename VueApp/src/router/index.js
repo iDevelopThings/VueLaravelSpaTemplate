@@ -9,7 +9,7 @@ const router = new VueRouter({
     mode   : 'history'
 });
 
-router.beforeEach((to, from, next) => {
+router.beforeEach(async (to, from, next) => {
     if (to.matched.some(record => record.meta.requiresAuth)) {
         // this route requires auth, check if logged in
         // if not, redirect to login page.
@@ -28,7 +28,7 @@ router.beforeEach((to, from, next) => {
             return;
         }
 
-        if (!window.app.store.user.isAuthed()) {
+        if (!await window.app.store.user.isAuthed()) {
             next({
                 path  : '/login',
                 query : {redirect : to.fullPath}

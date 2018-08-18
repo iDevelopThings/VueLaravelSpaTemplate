@@ -10,8 +10,31 @@
     <link rel="stylesheet" href="./../public/css/app.css">
 </head>
 <body>
-<div id="app" class="min-h-screen bg-grey-lightest">
-    <div v-if="store.app.ready">
+<div id="app" class="min-h-screen" v-cloak>
+
+    <transition-group name="fade"
+                      enter-active-class="fadeInDown"
+                      leave-active-class="fadeOutUp"
+                      class="float-alert-container mx-auto">
+        <div :class="`alert clearfix alert-${notification.type} rounded`"
+             :key="notification.id"
+             role="alert"
+             v-for="(notification, index) in $store.app.notifications">
+            <div v-if="notification.type !== 'validation'" class="w-full">
+                <p>{{notification.message}}</p>
+            </div>
+            <div v-else class="w-full">
+                <small>Error with field: <strong>{{notification.field}}</strong></small>
+                <br>
+                <p>{{notification.message}}</p>
+            </div>
+            <div class="float-right text-white cursor-pointer p-3 " @click="$store.app.closeNotification(notification)">
+                X
+            </div>
+        </div>
+    </transition-group>
+
+    <div v-if="store.app.ready" class="h-full">
         <keep-alive>
             <router-view></router-view>
         </keep-alive>

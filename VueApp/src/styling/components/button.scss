@@ -1,9 +1,14 @@
 .btn {
   transition: all 0.15s ease-in-out;
-  @apply font-bold py-2 px-4 rounded;
+  @apply font-bold py-4 px-8 rounded;
+  @apply bg-grey-lighter ;
 
   &:disabled {
     cursor: not-allowed;
+  }
+
+  &:hover {
+    @apply bg-grey-light ;
   }
 }
 

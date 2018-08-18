@@ -1,0 +1,53 @@
+.navigation-menu {
+  @apply flex items-center justify-between flex-wrap bg-grey-darkest p-6;
+
+  > .branding {
+    @apply flex items-center flex-no-shrink text-white mr-6;
+
+    > .brand-text {
+      @apply font-semibold text-xl tracking-tight;
+    }
+  }
+
+  > .hamburger {
+    @apply block;
+
+    @screen lg {
+      @apply hidden;
+    }
+  }
+
+  > .menu-items-container {
+    @apply w-full block flex-grow;
+
+    @screen lg {
+      @apply flex items-center w-auto;
+    }
+
+    > .items {
+
+      > a {
+        @apply block mt-4 text-grey mr-4 no-underline;
+        transition: all ease-in-out $animationDuration;
+
+        &:hover {
+          @apply text-white;
+        }
+
+        &.active {
+          @apply font-bold text-white;
+        }
+
+        @screen lg {
+          @apply inline-block mt-0;
+        }
+      }
+
+      @screen lg {
+        @apply flex-grow;
+      }
+    }
+
+  }
+
+}

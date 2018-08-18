@@ -1,0 +1,17 @@
+label {
+  @apply block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2;
+}
+
+input {
+  @apply appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 leading-tight mb-2;
+
+  &:focus {
+    transition: all ease-in-out $animationDurationFast;
+
+    @apply outline-none bg-white border-grey;
+  }
+}
+
+.form-group {
+  @apply mb-4;
+}
