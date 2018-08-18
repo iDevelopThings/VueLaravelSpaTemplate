@@ -1,0 +1,17 @@
+/LaravelApi/node_modules
+/LaravelApi/public/hot
+/LaravelApi/public/storage
+/LaravelApi/storage/*.key
+/LaravelApi/vendor
+/LaravelApi/.idea
+/LaravelApi/.vscode
+/LaravelApi/.vagrant
+/LaravelApiHomestead.json
+/LaravelApiHomestead.yaml
+/LaravelApinpm-debug.log
+/LaravelApiyarn-error.log
+/LaravelApi.env
+/LaravelApi.phpunit.result.cache
+/.idea
+/VueApp/node_modules
+/VueApp/.idea
