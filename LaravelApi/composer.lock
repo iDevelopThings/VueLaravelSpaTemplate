@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f4077e1e0c5e3fb41f3a10bd02d06497",
+    "content-hash": "6d9aa54c894daaed6e35ff3c0dc6ed56",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -614,16 +614,16 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "2.1.4",
+            "version": "2.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "8790f594151ca6a2010c6218e09d96df67173ad3"
+                "reference": "54859fabea8b3beecbb1a282888d5c990036b9e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/8790f594151ca6a2010c6218e09d96df67173ad3",
-                "reference": "8790f594151ca6a2010c6218e09d96df67173ad3",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/54859fabea8b3beecbb1a282888d5c990036b9e3",
+                "reference": "54859fabea8b3beecbb1a282888d5c990036b9e3",
                 "shasum": ""
             },
             "require": {
@@ -667,7 +667,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2018-04-10T10:11:19+00:00"
+            "time": "2018-08-16T20:49:45+00:00"
         },
         {
             "name": "erusev/parsedown",
@@ -2287,14 +2287,20 @@
         },
         {
             "name": "scootersam/crud-models",
-            "version": "dev-master",
+            "version": "0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ScooterSam/crud-models.git",
+                "reference": "c1e1ec9e0d98bd192134598e80667746e47db68b"
+            },
             "dist": {
-                "type": "path",
-                "url": "packages/scootersam/crud-models",
-                "reference": "5a57a5aa67f6688e740134078d166c249c08e592",
-                "shasum": null
+                "type": "zip",
+                "url": "https://api.github.com/repos/ScooterSam/crud-models/zipball/c1e1ec9e0d98bd192134598e80667746e47db68b",
+                "reference": "c1e1ec9e0d98bd192134598e80667746e47db68b",
+                "shasum": ""
             },
             "require": {
+                "doctrine/dbal": "^2.8",
                 "illuminate/support": "~5.6.0",
                 "php": ">=7.0"
             },
@@ -2315,19 +2321,7 @@
                     "ScooterSam\\CrudModels\\": "src"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "ScooterSam\\CrudModels\\Tests\\": "tests"
-                },
-                "files": [
-                    "vendor/phpunit/phpunit/src/Framework/Assert/Functions.php"
-                ]
-            },
-            "scripts": {
-                "phpunit": [
-                    "phpunit"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2341,7 +2335,8 @@
             "keywords": [
                 "crud",
                 "models"
-            ]
+            ],
+            "time": "2018-08-19T19:37:08+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -5245,9 +5240,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "scootersam/crud-models": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

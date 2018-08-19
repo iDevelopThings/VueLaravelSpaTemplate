@@ -2,10 +2,10 @@ import {del, get, set} from 'idb-keyval';
 
 export default {
 	credentials : {
-		name             : 'Acme',
-		email            : 'a@b.co',
-		password         : 'secret',
-		password_confirm : 'secret',
+		name                  : 'Acme',
+		email                 : 'a@b.co',
+		password              : 'secret',
+		password_confirmation : 'secret',
 	},
 	loggedIn    : false,
 	user        : null,
@@ -94,6 +94,19 @@ export default {
 				console.log(error);
 			});
 
+	},
+
+	async register()
+	{
+		await axios.post(`/register`, this.credentials)
+			.then(async (response) => {
+				window.app.store.app.addNotification('Successfully registered!', 'success');
+				await set('token', response.data.token);
+				await this.authFromToken();
+
+				window.app.$router.push({path : '/dashboard'});
+			})
+			.catch(error => console.log);
 	},
 
 	/**

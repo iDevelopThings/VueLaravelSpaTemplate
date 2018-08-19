@@ -2,7 +2,7 @@
 
 namespace App\ModelResources;
 
-use Illuminate\Validation\Rule;
+use App\User;
 use ScooterSam\CrudModels\ModelResource\ModelResource;
 
 class UserModelResource extends ModelResource
@@ -12,7 +12,7 @@ class UserModelResource extends ModelResource
      *
      * @var Model
      */
-    protected $model = null;
+    protected $model = User::class;
 
     /**
      * This is basically what you wish to call every ModelResource publicly.
@@ -20,14 +20,14 @@ class UserModelResource extends ModelResource
      *
      * @var string
      */
-    protected $title = 'DummyName';
+    protected $title = 'Users';
 
     /**
      * Which fields do we want to show on the frontend?
      *
      * @var $fields
      */
-    protected $fields = ['id'];
+    protected $fields = ['id', 'name', 'email', 'created_at'];
 
     /**
      * Fields that are able to be searched with mysql
@@ -36,7 +36,7 @@ class UserModelResource extends ModelResource
      *
      * @return null|array
      */
-    protected $searchableFields = [];
+    protected $searchableFields = ['name', 'email'];
 
     /**
      * Assign middleware to this crud model endpoint
@@ -47,12 +47,16 @@ class UserModelResource extends ModelResource
      */
     protected $middleware = [];
 
-     /**
+    /**
      * How we want to title the fields, when we do display them on the frontend
      *
      * @var $mappers
      */
-    protected $mappers = ['id' => '#'];
+    protected $mappers = [
+        'id'    => '#',
+        'name'  => 'Name',
+        'email' => 'Email',
+    ];
 
     /**
      * Validations array that will be used when creating a resource

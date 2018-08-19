@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::group(['prefix' => 'api'], function () {
     Route::post('/login', 'Auth\LoginController@login');
+    Route::post('/register', 'Auth\RegisterController@register');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
