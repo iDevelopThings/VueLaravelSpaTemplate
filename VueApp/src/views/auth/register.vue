@@ -74,10 +74,12 @@
 		{
 		},
 		store   : {
-			email    : 'user.credentials.email',
-			password : 'user.credentials.password',
-			user     : 'user.user',
-			loggedIn : 'user.loggedIn',
+			name             : 'user.credentials.name',
+			email            : 'user.credentials.email',
+			password         : 'user.credentials.password',
+			password_confirm : 'user.credentials.password_confirm',
+			user             : 'user.user',
+			loggedIn         : 'user.loggedIn',
 		},
 		methods : {
 

@@ -2,8 +2,10 @@ import {del, get, set} from 'idb-keyval';
 
 export default {
 	credentials : {
-		email    : 'a@b.co',
-		password : 'secret',
+		name             : 'Acme',
+		email            : 'a@b.co',
+		password         : 'secret',
+		password_confirm : 'secret',
 	},
 	loggedIn    : false,
 	user        : null,

@@ -68149,8 +68149,10 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 /* harmony default export */ __webpack_exports__["a"] = ({
 	credentials: {
+		name: 'Acme',
 		email: 'a@b.co',
-		password: 'secret'
+		password: 'secret',
+		password_confirm: 'secret'
 	},
 	loggedIn: false,
 	user: null,
@@ -68661,8 +68663,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 	mounted: function mounted() {},
 
 	store: {
+		name: 'user.credentials.name',
 		email: 'user.credentials.email',
 		password: 'user.credentials.password',
+		password_confirm: 'user.credentials.password_confirm',
 		user: 'user.user',
 		loggedIn: 'user.loggedIn'
 	},
